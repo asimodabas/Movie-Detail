@@ -19,6 +19,5 @@ class FilmlerActivity : AppCompatActivity() {
         filmlerRv.setHasFixedSize(true)
         filmlerRv.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
 
-
     }
 }
