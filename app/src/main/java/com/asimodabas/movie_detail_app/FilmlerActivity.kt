@@ -17,8 +17,10 @@ class FilmlerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filmler)
 
+        val kategori = intent.getSerializableExtra("kategoriNesne") as Kategoriler
 
-        toolbarFilmler.title = "Filmler"
+
+        toolbarFilmler.title = "Filmler : ${kategori.kategori_ad}"
         setSupportActionBar(toolbarFilmler)
 
         filmlerRv.setHasFixedSize(true)

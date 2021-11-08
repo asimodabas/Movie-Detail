@@ -1,6 +1,7 @@
 package com.asimodabas.movie_detail_app
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,10 +39,13 @@ class FilmlerAdapter(private val mContext: Context, private val filmlerListe: Li
 
         val film = filmlerListe.get(position)
         holder.textViewFilmAd.text = film.film_ad
-        holder.imageViewFilmResim.setImageResource(mContext.resources.getIdentifier(film.film_resim,"drawable",mContext.packageName))
+
+        holder.imageViewFilmResim.setImageResource(mContext.resources.getIdentifier(film.film_resim, "drawable", mContext.packageName))
+
         holder.film_card.setOnClickListener {
-
-
+            val intent = Intent(mContext, DetayActivity::class.java)
+            intent.putExtra("filmNesne", film)
+            mContext.startActivity(intent)
 
         }
 
