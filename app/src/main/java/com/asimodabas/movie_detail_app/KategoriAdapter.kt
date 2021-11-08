@@ -1,6 +1,7 @@
 package com.asimodabas.movie_detail_app
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,10 +34,13 @@ class KategoriAdapter(private val mContext: Context, private val kategoriListe: 
     override fun onBindViewHolder(holder: CardTasarimTutucu, position: Int) {
 
         val kategori = kategoriListe.get(position)
-holder.textViewKategoriAd.text = kategori.kategori_ad
+
+        holder.textViewKategoriAd.text = kategori.kategori_ad
         holder.kategori_card.setOnClickListener {
 
-
+            val intent = Intent(mContext, FilmlerActivity::class.java)
+            intent.putExtra("kategoriNesne", kategori)
+            mContext.startActivity(intent)
 
         }
 
