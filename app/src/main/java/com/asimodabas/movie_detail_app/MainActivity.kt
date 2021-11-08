@@ -7,8 +7,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var kategoriListe:ArrayList<Kategoriler>
-    private lateinit var adapter:KategoriAdapter
+    private lateinit var kategoriListe: ArrayList<Kategoriler>
+    private lateinit var adapter: KategoriAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,15 +19,16 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbarKategori)
 
         KategoriRv.setHasFixedSize(true)
-        KategoriRv.layoutManager=LinearLayoutManager(this)
+        KategoriRv.layoutManager = LinearLayoutManager(this)
 
-        kategoriListe=ArrayList()
-        val k1 = Kategoriler(1,"Komedi")
-        val k2 = Kategoriler(2,"Bilim Kurgu")
+        kategoriListe = ArrayList()
+        val k1 = Kategoriler(1, "Komedi")
+        val k2 = Kategoriler(2, "Bilim Kurgu")
 
         kategoriListe.add(k1)
         kategoriListe.add(k2)
 
-        adapter=KategoriAdapter(this,kategoriListe)
+        adapter = KategoriAdapter(this, kategoriListe)
+        KategoriRv.adapter = adapter
     }
 }
