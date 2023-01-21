@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.activity.main.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarKategori"
+        android:id="@+id/toolbarCategory"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -18,11 +18,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/KategoriRv"
+        android:id="@+id/categoryRv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarKategori" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarCategory" />
 </androidx.constraintlayout.widget.ConstraintLayout>

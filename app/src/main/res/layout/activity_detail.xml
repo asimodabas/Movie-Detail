@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetayActivity">
+    tools:context=".ui.activity.detail.DetailActivity">
 
 
     <ImageView
-        android:id="@+id/imageViewResim"
+        android:id="@+id/ivImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="139dp"
@@ -17,8 +17,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/django" />
+
     <TextView
-        android:id="@+id/textViewFilmAdi"
+        android:id="@+id/tvFilmName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
@@ -27,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewResim" />
+        app:layout_constraintTop_toBottomOf="@+id/ivImage" />
 
     <TextView
-        android:id="@+id/textViewFilmYili"
+        android:id="@+id/tvFilmYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -39,10 +40,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFilmAdi" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFilmName" />
 
     <TextView
-        android:id="@+id/textViewFilmYonetmeni"
+        android:id="@+id/tvFilmDirector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -53,5 +54,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFilmYili" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFilmYear" />
 </androidx.constraintlayout.widget.ConstraintLayout>
